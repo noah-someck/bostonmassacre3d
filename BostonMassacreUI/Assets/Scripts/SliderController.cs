@@ -11,7 +11,8 @@ public class SliderController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        crowdSlider.GetComponent<Slider>().value = 50;
+        currentDisplay.GetComponent<Text>().text = "50";
 	}
 	
 	// Update is called once per frame

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CaptainController : MonoBehaviour {
 
-    public GameObject frontButton;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -23,4 +21,6 @@ public class CaptainController : MonoBehaviour {
 	void OnBehindCLicked () {
 
 	}
+
+
 }
