@@ -14,7 +14,7 @@ public class CaptainController : MonoBehaviour {
 		
 	}
 
-	void OnFrontCLicked () {
+	public void OnFrontCLicked () {
 		Debug.Log ("a");
 	}
 

@@ -13,4 +13,8 @@ public class SliderController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void ButtonClick() {
+        int x = 0;
+    }
 }
