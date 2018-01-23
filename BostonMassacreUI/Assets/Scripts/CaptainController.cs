@@ -59,4 +59,6 @@ public class CaptainController : MonoBehaviour {
 			frontButton.GetComponent<Button> ().colors = colorBlock;
 		}
 	}
+
+
 }
