@@ -21,7 +21,7 @@ public class CrowdVars : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public static CrowdVars getCrowdVars() {
@@ -49,7 +49,7 @@ public class CrowdVars : MonoBehaviour {
 		return crowdVars.crowdMood;
 	}
 
-	public void set(int crowdSize) {
+	public void setCrowdSize(int crowdSize) {
 		this.crowdSize = crowdSize;
 		Debug.Log (crowdSize);
 	}
