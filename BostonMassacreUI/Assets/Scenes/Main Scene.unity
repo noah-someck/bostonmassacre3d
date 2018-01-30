@@ -283,7 +283,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 5
 --- !u!222 &94946385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -694,10 +694,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1203457990}
   m_HandleRect: {fileID: 385220096}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
+  m_MinValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 1
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -716,6 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crowdSlider: {fileID: 646442083}
   currentDisplay: {fileID: 1469521924}
+  increment: 5
 --- !u!1 &731501711
 GameObject:
   m_ObjectHideFlags: 0
