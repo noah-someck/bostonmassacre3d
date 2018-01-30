@@ -36,10 +36,11 @@ public class SliderController : MonoBehaviour {
             val = int.Parse(inputText.GetComponent<Text>().text) / increment;
         }
         catch {
-            // Show something
+            // Show some error
             return;
         }
-        if (val >= 5 && val <= 100)
+
+        if (val >= 0)
         {
             crowdSlider.GetComponent<Slider>().value = val;
             updateSliderValue();

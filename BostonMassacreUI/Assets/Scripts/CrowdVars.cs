@@ -51,7 +51,7 @@ public class CrowdVars {
 
 	public void setCrowdSize(int crowdSize) {
 		this.crowdSize = crowdSize;
-		Debug.Log (crowdSize);
+		//Debug.Log (crowdSize);
 	}
 
 	public int getCrowdSize() {
