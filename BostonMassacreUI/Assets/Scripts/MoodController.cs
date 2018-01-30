@@ -34,7 +34,7 @@ public class MoodController : MonoBehaviour {
 		
 	}
 
-	public void onCalmClicked () {
+	public void OnCalmClicked () {
 		if (!calmClicked) {
 			calmClicked = true;
 			agitatedClicked = false;
@@ -44,11 +44,11 @@ public class MoodController : MonoBehaviour {
 			agitatedButton.GetComponent<Button> ().colors = whiteColors;
 			hostileButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Calm);
+			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Calm);
 		}
 	}
 
-	public void onAgitatedClicked () {
+	public void OnAgitatedClicked () {
 		if (!agitatedClicked) {
 			agitatedClicked = true;
 			calmClicked = false;
@@ -58,11 +58,11 @@ public class MoodController : MonoBehaviour {
 			calmButton.GetComponent<Button> ().colors = whiteColors;
 			hostileButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Agitated);
+			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Agitated);
 		}
 	}
 
-	public void onHostileClicked () {
+	public void OnHostileClicked () {
 		if (!hostileClicked) {
 			hostileClicked = true;
 			calmClicked = false;
@@ -72,7 +72,7 @@ public class MoodController : MonoBehaviour {
 			calmButton.GetComponent<Button> ().colors = whiteColors;
 			agitatedButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Hostile);
+			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Hostile);
 		}
 	}
 }

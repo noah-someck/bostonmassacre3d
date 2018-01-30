@@ -5,9 +5,9 @@ using UnityEngine;
 public class CrowdVars {
 
     private int crowdSize;
-	public enum POSITION { Front, Back, Left, Right };
+	public enum POSITION { Front = 0, Back = 1, Left = 2, Right = 3 };
     private POSITION captainPosition;
-	public enum MOOD { Calm, Agitated, Hostile };
+	public enum MOOD { Calm = 0, Agitated = 1, Hostile = 2 };
 	private MOOD crowdMood;
 	private static CrowdVars crowdVars;
 
@@ -21,37 +21,37 @@ public class CrowdVars {
 
 	}
 
-	public static CrowdVars getCrowdVars() {
+	public static CrowdVars GetCrowdVars() {
 		if (crowdVars == null) {
 			crowdVars = new CrowdVars ();
 		}
 		return crowdVars;
 	}
 
-	public void setCaptainPosition(POSITION captainPosition) {
+	public void SetCaptainPosition(POSITION captainPosition) {
 		this.captainPosition = captainPosition;
 		Debug.Log (captainPosition);
 	}
 
-	public POSITION getCaptainPosition() {
+	public POSITION GetCaptainPosition() {
 		return crowdVars.captainPosition;
 	}
 
-	public void setMood(MOOD crowdMood) {
+	public void SetMood(MOOD crowdMood) {
 		this.crowdMood = crowdMood;
 		Debug.Log (crowdMood);
 	}
 
-	public MOOD getMood() {
+	public MOOD GetMood() {
 		return crowdVars.crowdMood;
 	}
 
-	public void setCrowdSize(int crowdSize) {
+	public void SetCrowdSize(int crowdSize) {
 		this.crowdSize = crowdSize;
 		//Debug.Log (crowdSize);
 	}
 
-	public int getCrowdSize() {
+	public int GetCrowdSize() {
 		return crowdVars.crowdSize;
 	}
 }

@@ -23,13 +23,13 @@ public class SliderController : MonoBehaviour {
 
 	}
 
-    public void updateSliderValue() {
+    public void UpdateSliderValue() {
         int val = (int)crowdSlider.GetComponent<Slider>().value * increment;
         currentDisplay.GetComponent<Text>().text = val.ToString();
-        CrowdVars.getCrowdVars().setCrowdSize(val);
+        CrowdVars.GetCrowdVars().SetCrowdSize(val);
     }
 
-    public void updateSliderFromInput() {
+    public void UpdateSliderFromInput() {
         int val;
         try
         {
@@ -43,7 +43,7 @@ public class SliderController : MonoBehaviour {
         if (val >= 0)
         {
             crowdSlider.GetComponent<Slider>().value = val;
-            updateSliderValue();
+            UpdateSliderValue();
             inputField.Select();
             inputField.text = "";
         }
