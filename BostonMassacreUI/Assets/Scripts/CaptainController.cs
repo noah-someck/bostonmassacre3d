@@ -7,16 +7,24 @@ public class CaptainController : MonoBehaviour {
 
 	public GameObject frontButton;
 	public GameObject backButton;
-	private bool toggleFront;
-	private Color grayColor;
-	private Color whiteColor;
+	private bool frontClicked;
+	private bool behindClicked;
+	private ColorBlock grayColors;
+	private ColorBlock whiteColors;
 
 
 	// Use this for initialization
 	void Start () {
-		toggleFront = false;
-		whiteColor = Color.white;
-		grayColor = Color.gray; 
+		frontClicked = false;
+		behindClicked = false;
+
+		ColorBlock colorBlock = frontButton.GetComponent<Button> ().colors;
+		colorBlock.normalColor = Color.white;
+		whiteColors = colorBlock;
+
+		colorBlock.normalColor = Color.gray;
+		colorBlock.highlightedColor = Color.gray;
+		grayColors = colorBlock;
 	}
 	
 	// Update is called once per frame
@@ -25,38 +33,26 @@ public class CaptainController : MonoBehaviour {
 	}
 
 	public void OnFrontCLicked () {
-		if (!toggleFront) {
-			toggleFront = true;
+		if (!frontClicked) {
+			frontClicked = true;
+			behindClicked = false;
 
-			Button tempButton = frontButton.GetComponent<Button> ();
-			ColorBlock colorBlock = tempButton.colors;
-			colorBlock.normalColor = Color.gray;
-			colorBlock.highlightedColor = Color.gray;
-			frontButton.GetComponent<Button> ().colors = colorBlock;
+			frontButton.GetComponent<Button> ().colors = grayColors;
+			backButton.GetComponent<Button> ().colors = whiteColors;
 
-			tempButton = backButton.GetComponent<Button> ();
-			colorBlock = tempButton.colors;
-			colorBlock.normalColor = Color.white;
-			colorBlock.highlightedColor = Color.white;
-			backButton.GetComponent<Button> ().colors = colorBlock;
+			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.CAPTAIN_POSITION_FRONT);
 		}
 	}
 
 	public void OnBehindCLicked () {
-		if (toggleFront) {
-			toggleFront = false;
+		if (!behindClicked) {
+			behindClicked = true;
+			frontClicked = false;
 
-			Button tempButton = backButton.GetComponent<Button> ();
-			ColorBlock colorBlock = tempButton.colors;
-			colorBlock.normalColor = Color.gray;
-			colorBlock.highlightedColor = Color.gray;
-			backButton.GetComponent<Button> ().colors = colorBlock;
+			backButton.GetComponent<Button> ().colors = grayColors;
+			frontButton.GetComponent<Button> ().colors = whiteColors;
 
-			tempButton = frontButton.GetComponent<Button> ();
-			colorBlock = tempButton.colors;
-			colorBlock.normalColor = Color.white;
-			colorBlock.highlightedColor = Color.white;
-			frontButton.GetComponent<Button> ().colors = colorBlock;
+			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.CAPTAIN_POSITION_BEHIND);
 		}
 	}
 
