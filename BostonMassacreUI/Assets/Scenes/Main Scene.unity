@@ -1028,7 +1028,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 952428430}
-        m_MethodName: updateSliderFromInput
+        m_MethodName: UpdateSliderFromInput
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1929,7 +1929,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 952428430}
-        m_MethodName: updateSliderValue
+        m_MethodName: UpdateSliderValue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2731,7 +2731,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frontButton: {fileID: 1334607913}
-  backButton: {fileID: 731501711}
+  behindButton: {fileID: 0}
+  leftButton: {fileID: 0}
+  rightButton: {fileID: 0}
 --- !u!1 &1455971833
 GameObject:
   m_ObjectHideFlags: 0
