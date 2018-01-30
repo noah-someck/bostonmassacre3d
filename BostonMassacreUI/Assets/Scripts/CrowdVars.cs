@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrowdVars : MonoBehaviour {
+public class CrowdVars {
 
     private int crowdSize;
     private int captainPosition;
