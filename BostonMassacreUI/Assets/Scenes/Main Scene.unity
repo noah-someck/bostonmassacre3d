@@ -610,7 +610,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 98808031}
-        m_MethodName: onAgitatedClicked
+        m_MethodName: OnAgitatedClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1437,7 +1437,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 98808031}
-        m_MethodName: onHostileClicked
+        m_MethodName: OnHostileClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1809,7 +1809,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 98808031}
-        m_MethodName: onCalmClicked
+        m_MethodName: OnCalmClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
