@@ -44,7 +44,7 @@ public class MoodController : MonoBehaviour {
 			agitatedButton.GetComponent<Button> ().colors = whiteColors;
 			hostileButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD_CALM);
+			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Calm);
 		}
 	}
 
@@ -58,7 +58,7 @@ public class MoodController : MonoBehaviour {
 			calmButton.GetComponent<Button> ().colors = whiteColors;
 			hostileButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD_AGITATED);
+			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Agitated);
 		}
 	}
 
@@ -72,7 +72,7 @@ public class MoodController : MonoBehaviour {
 			calmButton.GetComponent<Button> ().colors = whiteColors;
 			agitatedButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD_HOSTILE);
+			CrowdVars.getCrowdVars ().setMood (CrowdVars.MOOD.Hostile);
 		}
 	}
 }

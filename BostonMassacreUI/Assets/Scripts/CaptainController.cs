@@ -40,7 +40,7 @@ public class CaptainController : MonoBehaviour {
 			frontButton.GetComponent<Button> ().colors = grayColors;
 			backButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.CAPTAIN_POSITION_FRONT);
+			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.POSITION.Front);
 		}
 	}
 
@@ -52,7 +52,7 @@ public class CaptainController : MonoBehaviour {
 			backButton.GetComponent<Button> ().colors = grayColors;
 			frontButton.GetComponent<Button> ().colors = whiteColors;
 
-			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.CAPTAIN_POSITION_BEHIND);
+			CrowdVars.getCrowdVars ().setCaptainPosition (CrowdVars.POSITION.Back);
 		}
 	}
 

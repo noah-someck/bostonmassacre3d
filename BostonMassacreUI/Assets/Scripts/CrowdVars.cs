@@ -5,13 +5,10 @@ using UnityEngine;
 public class CrowdVars {
 
     private int crowdSize;
-    private int captainPosition;
-    private int crowdMood;
-	public static int CAPTAIN_POSITION_FRONT = 1;
-	public static int CAPTAIN_POSITION_BEHIND = 2;
-	public static int MOOD_CALM = 1;
-	public static int MOOD_AGITATED = 2;
-	public static int MOOD_HOSTILE = 3;
+	public enum POSITION { Front, Back, Left, Right };
+    private POSITION captainPosition;
+	public enum MOOD { Calm, Agitated, Hostile };
+	private MOOD crowdMood;
 	private static CrowdVars crowdVars;
 
 	// Use this for initialization
@@ -31,21 +28,21 @@ public class CrowdVars {
 		return crowdVars;
 	}
 
-	public void setCaptainPosition(int captainPosition) {
+	public void setCaptainPosition(POSITION captainPosition) {
 		this.captainPosition = captainPosition;
 		Debug.Log (captainPosition);
 	}
 
-	public int getCaptainPosition() {
+	public POSITION getCaptainPosition() {
 		return crowdVars.captainPosition;
 	}
 
-	public void setMood(int crowdMood) {
+	public void setMood(MOOD crowdMood) {
 		this.crowdMood = crowdMood;
 		Debug.Log (crowdMood);
 	}
 
-	public int getMood() {
+	public MOOD getMood() {
 		return crowdVars.crowdMood;
 	}
 
