@@ -11,8 +11,7 @@ public class MoodController : MonoBehaviour {
 	private bool calmClicked;
 	private bool agitatedClicked;
 	private bool hostileClicked;
-	private ColorBlock grayColors;
-	private ColorBlock whiteColors;
+	private Color regularColor;
 
 	// Use this for initialization
 	void Start () {
@@ -20,13 +19,7 @@ public class MoodController : MonoBehaviour {
 		agitatedClicked = false;
 		hostileClicked = false;
 
-		ColorBlock colorBlock = hostileButton.GetComponent<Button> ().colors;
-		colorBlock.normalColor = Color.white;
-		whiteColors = colorBlock;
-
-		colorBlock.normalColor = Color.gray;
-		colorBlock.highlightedColor = Color.gray;
-		grayColors = colorBlock;
+		regularColor = hostileButton.GetComponent<Image> ().color;
 	}
 	
 	// Update is called once per frame
@@ -40,9 +33,9 @@ public class MoodController : MonoBehaviour {
 			agitatedClicked = false;
 			hostileClicked = false;
 
-			calmButton.GetComponent<Button> ().colors = grayColors;
-			agitatedButton.GetComponent<Button> ().colors = whiteColors;
-			hostileButton.GetComponent<Button> ().colors = whiteColors;
+			calmButton.GetComponent<Image> ().color = Color.white;
+			agitatedButton.GetComponent<Image> ().color = regularColor;
+			hostileButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Calm);
 		}
@@ -54,9 +47,9 @@ public class MoodController : MonoBehaviour {
 			calmClicked = false;
 			hostileClicked = false;
 
-			agitatedButton.GetComponent<Button> ().colors = grayColors;
-			calmButton.GetComponent<Button> ().colors = whiteColors;
-			hostileButton.GetComponent<Button> ().colors = whiteColors;
+			agitatedButton.GetComponent<Image> ().color = Color.white;
+			calmButton.GetComponent<Image> ().color = regularColor;
+			hostileButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Agitated);
 		}
@@ -68,9 +61,9 @@ public class MoodController : MonoBehaviour {
 			calmClicked = false;
 			agitatedClicked = false;
 
-			hostileButton.GetComponent<Button> ().colors = grayColors;
-			calmButton.GetComponent<Button> ().colors = whiteColors;
-			agitatedButton.GetComponent<Button> ().colors = whiteColors;
+			hostileButton.GetComponent<Image> ().color = Color.white;
+			calmButton.GetComponent<Image> ().color = regularColor;
+			agitatedButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Hostile);
 		}

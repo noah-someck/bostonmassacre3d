@@ -13,8 +13,7 @@ public class CaptainController : MonoBehaviour {
 	private bool behindClicked;
 	private bool leftClicked;
 	private bool rightClicked;
-	private ColorBlock grayColors;
-	private ColorBlock whiteColors;
+	private Color regularColor;
 
 
 	// Use this for initialization
@@ -24,13 +23,7 @@ public class CaptainController : MonoBehaviour {
 		leftClicked = false;
 		rightClicked = false;
 
-		ColorBlock colorBlock = frontButton.GetComponent<Button> ().colors;
-		colorBlock.normalColor = Color.white;
-		whiteColors = colorBlock;
-
-		colorBlock.normalColor = Color.gray;
-		colorBlock.highlightedColor = Color.gray;
-		grayColors = colorBlock;
+		regularColor = frontButton.GetComponent<Image> ().color;
 	}
 	
 	// Update is called once per frame
@@ -45,10 +38,10 @@ public class CaptainController : MonoBehaviour {
 			leftClicked = false;
 			rightClicked = false;
 
-			frontButton.GetComponent<Button> ().colors = grayColors;
-			behindButton.GetComponent<Button> ().colors = whiteColors;
-			leftButton.GetComponent<Button> ().colors = whiteColors;
-			rightButton.GetComponent<Button> ().colors = whiteColors;
+			frontButton.GetComponent<Image> ().color = Color.white;
+			behindButton.GetComponent<Image> ().color = regularColor;
+			leftButton.GetComponent<Image> ().color = regularColor;
+			rightButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Front);
 		}
@@ -61,10 +54,10 @@ public class CaptainController : MonoBehaviour {
 			leftClicked = false;
 			rightClicked = false;
 
-			behindButton.GetComponent<Button> ().colors = grayColors;
-			frontButton.GetComponent<Button> ().colors = whiteColors;
-			leftButton.GetComponent<Button> ().colors = whiteColors;
-			rightButton.GetComponent<Button> ().colors = whiteColors;
+			behindButton.GetComponent<Image> ().color = Color.white;
+			frontButton.GetComponent<Image> ().color = regularColor;
+			leftButton.GetComponent<Image> ().color = regularColor;
+			rightButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Back);
 		}
@@ -77,10 +70,10 @@ public class CaptainController : MonoBehaviour {
 			behindClicked = false;
 			rightClicked = false;
 
-			leftButton.GetComponent<Button> ().colors = grayColors;
-			frontButton.GetComponent<Button> ().colors = whiteColors;
-			behindButton.GetComponent<Button> ().colors = whiteColors;
-			rightButton.GetComponent<Button> ().colors = whiteColors;
+			leftButton.GetComponent<Image> ().color = Color.white;
+			frontButton.GetComponent<Image> ().color = regularColor;
+			behindButton.GetComponent<Image> ().color = regularColor;
+			rightButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Left);
 		}
@@ -93,10 +86,10 @@ public class CaptainController : MonoBehaviour {
 			behindClicked = false;
 			leftClicked = false;
 
-			rightButton.GetComponent<Button> ().colors = grayColors;
-			frontButton.GetComponent<Button> ().colors = whiteColors;
-			behindButton.GetComponent<Button> ().colors = whiteColors;
-			leftButton.GetComponent<Button> ().colors = whiteColors;
+			rightButton.GetComponent<Image> ().color = Color.white;
+			frontButton.GetComponent<Image> ().color = regularColor;
+			behindButton.GetComponent<Image> ().color = regularColor;
+			leftButton.GetComponent<Image> ().color = regularColor;
 
 			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Right);
 		}
