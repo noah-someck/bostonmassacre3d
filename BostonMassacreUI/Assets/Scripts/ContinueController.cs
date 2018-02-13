@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ContinueController : MonoBehaviour {
 
@@ -24,7 +25,7 @@ public class ContinueController : MonoBehaviour {
 
 	public void OnContinueClicked () {
 		StartCoroutine(Upload());
-
+		SceneManager.LoadScene("Anton");
 	}
 
 	IEnumerator Upload()
