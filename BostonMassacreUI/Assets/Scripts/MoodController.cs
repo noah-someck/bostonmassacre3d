@@ -8,6 +8,7 @@ public class MoodController : MonoBehaviour {
 	public GameObject calmButton;
 	public GameObject agitatedButton;
 	public GameObject hostileButton;
+	private GameObject lastClicked;
 	private bool calmClicked;
 	private bool agitatedClicked;
 	private bool hostileClicked;
@@ -34,8 +35,10 @@ public class MoodController : MonoBehaviour {
 			hostileClicked = false;
 
 			calmButton.GetComponent<Image> ().color = Color.white;
-			agitatedButton.GetComponent<Image> ().color = regularColor;
-			hostileButton.GetComponent<Image> ().color = regularColor;
+			if (lastClicked != null) {
+				lastClicked.GetComponent<Image> ().color = regularColor;
+			}
+			lastClicked = calmButton;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Calm);
 		}
@@ -48,8 +51,10 @@ public class MoodController : MonoBehaviour {
 			hostileClicked = false;
 
 			agitatedButton.GetComponent<Image> ().color = Color.white;
-			calmButton.GetComponent<Image> ().color = regularColor;
-			hostileButton.GetComponent<Image> ().color = regularColor;
+			if (lastClicked != null) {
+				lastClicked.GetComponent<Image> ().color = regularColor;
+			}
+			lastClicked = agitatedButton;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Agitated);
 		}
@@ -62,8 +67,10 @@ public class MoodController : MonoBehaviour {
 			agitatedClicked = false;
 
 			hostileButton.GetComponent<Image> ().color = Color.white;
-			calmButton.GetComponent<Image> ().color = regularColor;
-			agitatedButton.GetComponent<Image> ().color = regularColor;
+			if (lastClicked != null) {
+				lastClicked.GetComponent<Image> ().color = regularColor;
+			}
+			lastClicked = hostileButton;
 
 			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Hostile);
 		}
