@@ -19,11 +19,6 @@ public class CaptainController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		frontClicked = false;
-		behindClicked = false;
-		leftClicked = false;
-		rightClicked = false;
-
 		regularColor = frontButton.GetComponent<Image> ().color;
 	}
 	

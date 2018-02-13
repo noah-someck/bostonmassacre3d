@@ -16,10 +16,6 @@ public class MoodController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		calmClicked = false;
-		agitatedClicked = false;
-		hostileClicked = false;
-
 		regularColor = hostileButton.GetComponent<Image> ().color;
 	}
 	
