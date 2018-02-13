@@ -30,7 +30,6 @@ public class CrowdVars {
 
 	public void SetCaptainPosition(POSITION captainPosition) {
 		this.captainPosition = captainPosition;
-		Debug.Log (captainPosition);
 	}
 
 	public POSITION GetCaptainPosition() {
@@ -39,7 +38,6 @@ public class CrowdVars {
 
 	public void SetMood(MOOD crowdMood) {
 		this.crowdMood = crowdMood;
-		Debug.Log (crowdMood);
 	}
 
 	public MOOD GetMood() {
@@ -48,7 +46,6 @@ public class CrowdVars {
 
 	public void SetCrowdSize(int crowdSize) {
 		this.crowdSize = crowdSize;
-		//Debug.Log (crowdSize);
 	}
 
 	public int GetCrowdSize() {
