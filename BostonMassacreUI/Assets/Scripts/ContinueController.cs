@@ -29,9 +29,9 @@ public class ContinueController : MonoBehaviour {
 
 	IEnumerator Upload()
 	{
-		int mood = (int)CrowdVars.GetCrowdVars ().GetMood();
-		int crowdSize = CrowdVars.GetCrowdVars ().GetCrowdSize();
-		int captainPosition = (int)CrowdVars.GetCrowdVars ().GetCaptainPosition ();
+		int mood = (int)CrowdVars.GetMood();
+		int crowdSize = CrowdVars.GetCrowdSize();
+		int captainPosition = (int)CrowdVars.GetCaptainPosition ();
 		WWWForm form = new WWWForm ();
 		form.AddField ("mood", mood);
 		form.AddField ("crowdSize", crowdSize);

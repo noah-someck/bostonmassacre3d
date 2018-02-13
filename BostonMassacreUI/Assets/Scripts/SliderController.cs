@@ -26,7 +26,7 @@ public class SliderController : MonoBehaviour {
     public void UpdateSliderValue() {
         int val = (int)crowdSlider.GetComponent<Slider>().value * increment;
         currentDisplay.GetComponent<Text>().text = val.ToString();
-        CrowdVars.GetCrowdVars().SetCrowdSize(val);
+        CrowdVars.SetCrowdSize(val);
     }
 
     public void UpdateSliderFromInput() {
