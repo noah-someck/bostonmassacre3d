@@ -1,54 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿public static class CrowdVars {
 
-public class CrowdVars {
-
-    private int crowdSize;
+    private static int crowdSize;
 	public enum POSITION { Front = 0, Back = 1, Left = 2, Right = 3 };
-    private POSITION captainPosition;
+    private static POSITION captainPosition;
 	public enum MOOD { Calm = 0, Agitated = 1, Hostile = 2 };
-	private MOOD crowdMood;
-	private static CrowdVars crowdVars;
+	private static MOOD crowdMood;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 
+	public static void SetCaptainPosition(POSITION position) {
+		captainPosition = position;
 	}
 
-	public static CrowdVars GetCrowdVars() {
-		if (crowdVars == null) {
-			crowdVars = new CrowdVars ();
-		}
-		return crowdVars;
+	public static POSITION GetCaptainPosition() {
+		return captainPosition;
 	}
 
-	public void SetCaptainPosition(POSITION captainPosition) {
-		this.captainPosition = captainPosition;
+	public static void SetMood(MOOD mood) {
+		crowdMood = mood;
 	}
 
-	public POSITION GetCaptainPosition() {
-		return crowdVars.captainPosition;
+	public static MOOD GetMood() {
+		return crowdMood;
 	}
 
-	public void SetMood(MOOD crowdMood) {
-		this.crowdMood = crowdMood;
+	public static void SetCrowdSize(int size) {
+		crowdSize = size;
 	}
 
-	public MOOD GetMood() {
-		return crowdVars.crowdMood;
-	}
-
-	public void SetCrowdSize(int crowdSize) {
-		this.crowdSize = crowdSize;
-	}
-
-	public int GetCrowdSize() {
-		return crowdVars.crowdSize;
+	public static int GetCrowdSize() {
+		return crowdSize;
 	}
 }

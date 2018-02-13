@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ContinueController : MonoBehaviour {
 
@@ -24,14 +25,14 @@ public class ContinueController : MonoBehaviour {
 
 	public void OnContinueClicked () {
 		StartCoroutine(Upload());
-
+		SceneManager.LoadScene("Anton");
 	}
 
 	IEnumerator Upload()
 	{
-		int mood = (int)CrowdVars.GetCrowdVars ().GetMood();
-		int crowdSize = CrowdVars.GetCrowdVars ().GetCrowdSize();
-		int captainPosition = (int)CrowdVars.GetCrowdVars ().GetCaptainPosition ();
+		int mood = (int)CrowdVars.GetMood();
+		int crowdSize = CrowdVars.GetCrowdSize();
+		int captainPosition = (int)CrowdVars.GetCaptainPosition ();
 		WWWForm form = new WWWForm ();
 		form.AddField ("mood", mood);
 		form.AddField ("crowdSize", crowdSize);

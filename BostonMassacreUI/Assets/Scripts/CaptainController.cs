@@ -40,7 +40,7 @@ public class CaptainController : MonoBehaviour {
 			}
 			lastClicked = frontButton;
 
-			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Front);
+			CrowdVars.SetCaptainPosition (CrowdVars.POSITION.Front);
 		}
 	}
 
@@ -57,7 +57,7 @@ public class CaptainController : MonoBehaviour {
 			}
 			lastClicked = behindButton;
 
-			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Back);
+			CrowdVars.SetCaptainPosition (CrowdVars.POSITION.Back);
 		}
 	}
 
@@ -74,7 +74,7 @@ public class CaptainController : MonoBehaviour {
 			}
 			lastClicked = leftButton;
 
-			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Left);
+			CrowdVars.SetCaptainPosition (CrowdVars.POSITION.Left);
 		}
 	}
 
@@ -91,7 +91,7 @@ public class CaptainController : MonoBehaviour {
 			}
 			lastClicked = rightButton;
 
-			CrowdVars.GetCrowdVars ().SetCaptainPosition (CrowdVars.POSITION.Right);
+			CrowdVars.SetCaptainPosition (CrowdVars.POSITION.Right);
 		}
 	}
 

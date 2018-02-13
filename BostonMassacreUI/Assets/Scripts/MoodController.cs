@@ -36,7 +36,7 @@ public class MoodController : MonoBehaviour {
 			}
 			lastClicked = calmButton;
 
-			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Calm);
+			CrowdVars.SetMood (CrowdVars.MOOD.Calm);
 		}
 	}
 
@@ -52,7 +52,7 @@ public class MoodController : MonoBehaviour {
 			}
 			lastClicked = agitatedButton;
 
-			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Agitated);
+			CrowdVars.SetMood (CrowdVars.MOOD.Agitated);
 		}
 	}
 
@@ -68,7 +68,7 @@ public class MoodController : MonoBehaviour {
 			}
 			lastClicked = hostileButton;
 
-			CrowdVars.GetCrowdVars ().SetMood (CrowdVars.MOOD.Hostile);
+			CrowdVars.SetMood (CrowdVars.MOOD.Hostile);
 		}
 	}
 }
